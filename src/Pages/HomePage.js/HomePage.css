@@ -1,0 +1,130 @@
+
+
+h1{
+    font-size: 50px;
+}
+
+
+.background-container {
+    justify-content: center;
+    text-align: center;
+    margin-top: 0;
+    width: auto;
+    background-image: url("https://lirp.cdn-website.com/87a49eaf/dms3rep/multi/opt/IMG_20220111_162647-58538e88-1920w.jpg")  !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    max-width: none !important;
+   
+    padding: 254px 40px !important;
+    height: auto !important;
+    background-color: transparent !important;
+    padding: 20%;
+    
+}
+
+
+
+.content {
+    z-index: 2; /* Ensure the content is above the pseudo-element */
+    color: white; /* Adjust text color to be visible against the dimmed background */
+    text-decoration-skip-ink: none;
+    word-wrap: break-word;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Adjust the values a */
+    backdrop-filter: brightness(60%);
+    padding-top: 10px;
+    padding-bottom: 25px ;
+    font-weight: 300;
+}
+
+#learn
+{
+    width: 2%;
+    height: 2%;
+    background-color: rgb(12, 82, 12);
+    border-radius: 10px;
+    border: 1px 1px 1px 1px solid black;
+     text-decoration: none;
+     color: white;
+     padding: .5%;
+}
+
+a:hover{
+    filter: brightness(60%);
+}
+
+
+#whytrain
+{
+    margin-top: 5%;
+    padding-bottom: 100px;
+}
+
+#desc
+{
+    justify-content: center;
+    text-align: center;
+    color:  darkslategray;
+    word-wrap: break-word;
+}
+
+#innov
+{
+    margin-bottom: 1% ;
+}
+
+.gridContainer
+{
+    display: flex;
+    justify-content: center;
+}
+.grid-item
+{
+    display: flex;
+    padding: 100px;
+    padding-bottom: 50px;
+    text-wrap: no-wrap;
+}
+
+.imgContainer {
+    flex: 0 0 auto; /* Ensure the image container doesn't grow */
+    margin-right: 10px; /* Adjust the margin to create space between image and text */
+  }
+  
+  .textContainer {
+    flex: 1; /* Allow the text container to grow and fill the available space */
+  }
+  
+  .head {
+    margin-top: 0; /* Reset margin for the heading */
+    font-size: 24px;     
+  }
+
+  .desc {
+    margin-top: 0; /* Reset margin for the paragraph */
+    text-wrap: nowrap;
+  }
+
+#About
+{
+    display: flex;
+}
+
+#abtxtcontainer
+{
+    background-color: green;
+    color: white;
+}
+#abtxtcontainer>h3
+{
+    flex: 1;
+    color: white;
+    font-size: 40px;
+    font-weight: 500;
+}
+#abImgContainer
+{
+    flex: 0; /* Ensure the image container doesn't grow */
+    margin-right: 10px; /* Adjust the margin to create space between image and text */
+}
+
