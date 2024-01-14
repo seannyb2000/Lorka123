@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from '../NavBar/Navbar';
 import './HomePage.css';
-import Carosel from '../Carosel/Carosel';
+import Carousels from '../Carosel/Carosel';
 import starSVG from '../assets/STAR.svg';  // Import SVG file
 const Home = () => {
 
@@ -78,18 +78,18 @@ const Home = () => {
 
       <div  id='About'>
         <div id='abImgContainter'>
-          <img src=''/>
         </div>
         <div id='abtxtcontainer'>
             <h3><b>About Us</b></h3>
             <p> Lorka  is a training academy that provides top notch training in a variety of subjects. We offer both private and small group sessions, so you can choose exactly the training style you like best. Our training academy is distinguished by the high level of service and support we provide to our students, deep knowledge of our Industry and the brands and Accreditations we offer , a unique Brand educators service for cosmetic, skin care and beauty treatment Start ups and Already established Brands   and most importantly, the high caliber of our tutors who are experts in Their fields.</p>
-            <a>Call Us</a>
+            <a id='callbtn'>Call Us</a>
         </div>
       </div>
 
-      <div id='caro'>
-        <Carosel/>
-      </div>
+     <div id='caro'>
+        <Carousels/>
+        </div>
+      
 
 
     </div>

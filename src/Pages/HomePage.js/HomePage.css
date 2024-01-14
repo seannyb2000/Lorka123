@@ -108,12 +108,15 @@ a:hover{
 #About
 {
     display: flex;
+   
 }
 
 #abtxtcontainer
 {
     background-color: green;
     color: white;
+    padding-bottom: 5%;
+    
 }
 #abtxtcontainer>h3
 {
@@ -121,10 +124,30 @@ a:hover{
     color: white;
     font-size: 40px;
     font-weight: 500;
-}
-#abImgContainer
-{
-    flex: 0; /* Ensure the image container doesn't grow */
-    margin-right: 10px; /* Adjust the margin to create space between image and text */
+    margin-left: 40px;
 }
 
+#abtxtcontainer>p
+{
+    flex: 1;
+    color: white;
+    margin-left: 40px;
+    margin-bottom: 4%;
+}
+#abImgContainter
+{
+    flex: 0; /* Ensure the image container doesn't grow */
+    padding-right: 300px; /* Adjust the margin to create space between image and text */
+    background-image: url("https://lirp.cdn-website.com/87a49eaf/dms3rep/multi/opt/lorka+logo-126w.png");
+    background-repeat:no-repeat ;
+    background-position: center;
+}
+
+#callbtn
+{
+    padding: 1%;
+    border-radius: 5%;
+    border: 2px solid white;
+    background-color: rgb(2, 176, 2);
+    margin-left: 3%;
+}
