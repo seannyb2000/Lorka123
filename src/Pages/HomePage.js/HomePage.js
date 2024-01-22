@@ -3,8 +3,12 @@ import NavBar from '../NavBar/Navbar';
 import './HomePage.css';
 import Carousels from '../Carosel/Carosel';
 import starSVG from '../assets/STAR.svg';  // Import SVG file
+import lorraine from '../assets/Lorraine_carosel_pic.png'
+import kara from '../assets/Kara_carousel_pic.png'
+import justina from '../assets/Justina_carousel_pic.png'
 const Home = () => {
-
+  
+  
   return (
     <div>
       <NavBar />
@@ -25,9 +29,8 @@ const Home = () => {
 
         <div id='reasons' className='gridContainer'>
           <div>
-          <div class="grid-item">
+          <div className="grid-item">
               <div className='imgContainer'>
-                <img id='img1' src='' alt='image'/>
               </div>
 
               <div className='textContainer' >
@@ -39,7 +42,6 @@ const Home = () => {
             <div class="grid-item">
 
                 <div className='imgContainer'>
-                  <img src='#' alt='image'/>
                 </div>
 
                 <div className='textContainer' >
@@ -52,7 +54,6 @@ const Home = () => {
           <div class="grid-item">
 
             <div className='imgContainer'>
-              <img src='#' alt='image'/>
             </div>
 
             <div className='textContainer' >
@@ -64,7 +65,6 @@ const Home = () => {
             <div class="grid-item">
 
               <div className='imgContainer'>
-                <img src='#' alt='image'/>
               </div>
 
               <div className='textContainer' >
@@ -85,12 +85,49 @@ const Home = () => {
             <a id='callbtn'>Call Us</a>
         </div>
       </div>
+<div className='ourteam'>
+  <p id='ourteamheader'>Our Team</p>
 
-     <div id='caro'>
-        <Carousels/>
+
+  <div class="row" id="fadeRow">
+    <div class="column">
+      <div class="card">
+        <img id='lor' src={lorraine} alt="Lorraine" />
+        <div class="container">
+          <h2>Lorraine Bourke Byrne</h2>
+          <p class="title">Co-Founder</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <a href='mailto:lorkamakeupandbeautytraining@gmail.com'>lorkamakeupandbeautytraining@gmail.com</a>
         </div>
-      
+      </div>
+    </div>
 
+    <div class="column">
+      <div class="card">
+        <img id='kar' src={kara} alt="Kara" />
+        <div class="container">
+          <h2>Kara Byrne</h2>
+          <p class="title">Co-Founder</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <a href='mailto:lorkamakeupandbeautytraining@gmail.com'>lorkamakeupandbeautytraining@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="card">
+        <img id='justina'  src={justina} alt="John"/>
+        <div class="container">
+          <h2>Justina  Zil</h2>
+          <p class="title">Owner Of Justina Lashes</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <a href='tel:087 964 8177'>087 964 8177</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
 
     </div>
   );

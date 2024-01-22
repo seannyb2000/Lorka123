@@ -8,7 +8,6 @@ const NavBar = () => {
     <header className="header">
       <nav>
         <ul className='navbar fade-in-border'>
-          <li>Brand Education</li>
           <li>About</li>
           <li>Our Team</li>
           <li>What we offer</li>
