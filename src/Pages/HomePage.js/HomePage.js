@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from '../NavBar/Navbar';
 import './HomePage.css';
-import Carousels from '../Carosel/Carosel';
 import starSVG from '../assets/STAR.svg';  // Import SVG file
 import lorraine from '../assets/Lorraine_carosel_pic.png'
 import kara from '../assets/Kara_carousel_pic.png'
 import justina from '../assets/Justina_carousel_pic.png'
+import experience from '../assets/experience.png'
+import small from '../assets/small.png'
+import unique from '../assets/unique.png'
+import industry from '../assets/industry.png'
 const Home = () => {
   
   
@@ -31,6 +34,7 @@ const Home = () => {
           <div>
           <div className="grid-item">
               <div className='imgContainer'>
+                <img  src={experience}></img>
               </div>
 
               <div className='textContainer' >
@@ -39,9 +43,10 @@ const Home = () => {
               </div>
           </div>
 
-            <div class="grid-item">
+            <div className="grid-item">
 
                 <div className='imgContainer'>
+                <img  src={unique}></img>
                 </div>
 
                 <div className='textContainer' >
@@ -51,9 +56,10 @@ const Home = () => {
             </div>
           </div>
           <div>
-          <div class="grid-item">
+          <div className="grid-item">
 
             <div className='imgContainer'>
+              <img src={small}></img>
             </div>
 
             <div className='textContainer' >
@@ -62,9 +68,10 @@ const Home = () => {
             </div>
             </div>
 
-            <div class="grid-item">
+            <div className="grid-item">
 
               <div className='imgContainer'>
+              <img src={industry}></img>
               </div>
 
               <div className='textContainer' >
@@ -86,41 +93,45 @@ const Home = () => {
         </div>
       </div>
 <div className='ourteam'>
-  <p id='ourteamheader'>Our Team</p>
+<p id='ourteamheader'>
+  <span id='meet'>Meet The</span>
+  <span id='team'> Team!</span>
+</p>
 
 
-  <div class="row" id="fadeRow">
-    <div class="column">
-      <div class="card">
+
+  <div className="row" id="fadeRow">
+    <div className="column">
+      <div className="card">
         <img id='lor' src={lorraine} alt="Lorraine" />
-        <div class="container">
+        <div className="container">
           <h2>Lorraine Bourke Byrne</h2>
-          <p class="title">Co-Founder</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p className="title">Co-Founder</p>
+          <p>Greetings, I'm Lorraine, one of the Co-Founders of Lorka Makeup and Beauty Training. With a rich 15-year tenure in the makeup industry, my journey has been adorned with collaborations with esteemed brands like Antipodes, Bare Minerals, and numerous others.<br/><br/>  </p>
           <a href='mailto:lorkamakeupandbeautytraining@gmail.com'>lorkamakeupandbeautytraining@gmail.com</a>
         </div>
       </div>
     </div>
 
-    <div class="column">
-      <div class="card">
+    <div className="column">
+      <div className="card">
         <img id='kar' src={kara} alt="Kara" />
-        <div class="container">
+        <div className="container">
           <h2>Kara Byrne</h2>
-          <p class="title">Co-Founder</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p className="title">Co-Founder</p>
+          <p>Hi Kara here. I am one of the Co-Founders here at Lorka Makeup and Beauty Training. I have been working in the beauty industry for many years with experience across all sectors.I am a skilled in all things Makeup , Brows , Waxing and more.* more Text* <br/><br/><br/></p>
           <a href='mailto:lorkamakeupandbeautytraining@gmail.com'>lorkamakeupandbeautytraining@gmail.com</a>
         </div>
       </div>
     </div>
     
-    <div class="column">
-      <div class="card">
+    <div className="column">
+      <div className="card">
         <img id='justina'  src={justina} alt="John"/>
-        <div class="container">
+        <div className="container">
           <h2>Justina  Zil</h2>
-          <p class="title">Owner Of Justina Lashes</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p className="title">Owner Of Justina Lashes</p>
+          <p>Grettings Justina here. I am the proud owner of Justina Lashes. I currently share the space with Lorka Makeup and Beauty Training.I work on clients lashes using my own lash products.If you would like to book in with me please visit me at <a href='https://www.instagram.com/justinalashes_/'>justinalashes_</a> on instagram or text the number below</p>
           <a href='tel:087 964 8177'>087 964 8177</a>
         </div>
       </div>
@@ -128,6 +139,21 @@ const Home = () => {
   </div>
 </div>
       
+
+  <div  id='Offer'>
+        <div id='offertxtcontainer'>
+            <h3>What We offer</h3>
+            <p><b> Welcome to Lorka, where we take beauty to new heights with our extensive range of premium services. Immerse yourself in a world of glamour and transformation as we offer an array of offerings, including personalized makeup appointments, comprehensive training sessions, enlightening theory courses, and much more.
+
+At Lorka, we are committed to setting the gold standard in our industry. Our dedicated staff takes immense pride in delivering services of the highest quality, ensuring that each client experiences the epitome of beauty and expertise.
+<br></br>Elevate your beauty experience with Lorka – where excellence meets elegance.</b></p>
+            <a id='bookbtn'>Book Now</a>
+        </div>
+        <div id='offerImgContainter'>
+        </div>
+
+      </div>
+
 
     </div>
   );
