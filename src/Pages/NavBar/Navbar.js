@@ -26,12 +26,12 @@ const NavBar = () => {
           </li>
           <li>
             <Link to="Offer" smooth={true} duration={800} onClick={() => scrollTo('Offer')}>
-              What we offer
+              Price List
             </Link>
           </li>
           <li>
-            <Link to="specialOffers" smooth={true} duration={800} onClick={() => scrollTo('specialOffers')}>
-              Special offers
+            <Link to="Contact" smooth={true} duration={800} onClick={() => scrollTo('Contact')}>
+              Contact Us
             </Link>
           </li>
          

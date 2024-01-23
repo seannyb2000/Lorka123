@@ -1,4 +1,6 @@
-
+body{
+  background-color: whitesmoke;
+}
 
 h1{
     font-size: 50px;
@@ -41,7 +43,7 @@ h1{
 {
     width: 2%;
     height: 2%;
-    background-color: rgb(12, 82, 12);
+    background-color: #2e8b57;
     border-radius: 10px;
     border: 1px 1px 1px 1px solid black;
      text-decoration: none;
@@ -64,7 +66,7 @@ a:hover{
 {
     justify-content: center;
     text-align: center;
-    color:  black;
+    color:  #2e8b57;
     word-wrap: break-word;
 }
 
@@ -100,7 +102,7 @@ a:hover{
   
   .textContainer {
     flex: 1; /* Allow the text container to grow and fill the available space */
-    color: darkslategray;
+    color: #2e8b57;
   }
   
   .head {
@@ -121,15 +123,15 @@ a:hover{
 
 #abtxtcontainer
 {
-    background-color: green;
-    color: white;
+    background-color: whitesmoke;
+    color: #2e8b57;
     padding-bottom: 5%;
     
 }
 #abtxtcontainer>h3
 {
     flex: 1;
-    color: white;
+    color: #2e8b57;
     font-size: 40px;
     font-weight: 500;
     margin-left: 40px;
@@ -138,7 +140,7 @@ a:hover{
 #abtxtcontainer>p
 {
     flex: 1;
-    color: white;
+    color: #2e8b57;
     margin-left: 40px;
     margin-bottom: 4%;
 }
@@ -156,8 +158,9 @@ a:hover{
     padding: 1%;
     border-radius: 5%;
     border: 2px solid white;
-    background-color: rgb(2, 176, 2);
+    background-color: #2e8b57;
     margin-left: 3%;
+    color: white;
 }
   
   .column {
@@ -167,7 +170,7 @@ a:hover{
     margin-right:2% ;
     margin-left:5% ;
     padding: 0 8px;
-
+    color: #2e8b57;
   }
   
   @media screen and (max-width: 650px) {
@@ -205,7 +208,7 @@ a:hover{
   }
   
   .title {
-    color: grey;
+    color: #2e8b57;
   }
   
   .button {
@@ -242,7 +245,7 @@ a:hover{
 
   #team
   {
-    color: green;
+    color: #2e8b57;
     font-weight: 600;
   }
   .card:hover
@@ -251,53 +254,69 @@ a:hover{
   }
 
  
-  #Offer
-{
+  #Offer {
     display: flex;
-   
-}
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
 
-#offertxtcontainer
-{
-    background-color: green;
-    color: white;
-    padding-bottom: 15%;
+  #offerImgContainter {
+    background-color: whitesmoke;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  .category {
     text-align: center;
-    
-}
-#offertxtcontainer>h3
-{
-    flex: 1;
-    color: white;
+    border: 1px solid rgb(190, 163, 6);
+    padding: 2%;
+    border-radius:1.5% ;
+  }
+
+  .category:hover
+  {
+    background-color: lightgray;
+  }
+
+  .category h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2e8b57;
+  }
+
+  .category ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: #2e8b57;
+  }
+
+  .category li {
+    margin-bottom: 8px;
+  }
+
+  #whatweoffer {
+    text-align: center;
+    color: #2e8b57;
     font-size: 40px;
     font-weight: 500;
-    margin-left: 40px;
-    margin-top: 30%;
-}
+  }
 
-#offertxtcontainer>p
-{
-    flex: 1;
-    color: white;
-   
-    margin-bottom: 4%;
-    margin-top: 10%;
-}
-#offerImgContainter
-{
-    flex: 0; /* Ensure the image container doesn't grow */
-    padding-left: 45%; /* Adjust the margin to create space between image and text */
-    background-image: url("../assets/PriceList.png");
-    background-repeat:space;
-    background-position:top;
-   background-size:cover;
-   zoom: 50%;
-}
+  #headering {
+    text-align: center;
+    font-size: larger;
+  }
 
 #bookbtn
 {
     padding: 1%;
-   
     border-bottom: 3px solid white;
     margin-left: 4%;
     padding-top: 10%;
@@ -305,5 +324,31 @@ a:hover{
 
 #bookbtn:hover
 {
-  opacity: .9;
+  color: #26814e;
+}
+
+#Contact
+{
+  display: flex;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  color:#26814e;
+  background-color: white;
+}
+
+#CompanyInfo
+{
+  width: 50%;
+  color:#26814e;
+}
+#CompanyInfo a{
+  text-decoration:none;
+  color:#26814e;
+}
+
+#OpeningHours
+{
+  font-weight: 600;
 }
