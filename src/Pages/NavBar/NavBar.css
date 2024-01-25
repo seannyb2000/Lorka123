@@ -19,16 +19,16 @@
     .navbar li {
         margin-top: 3%;
         padding: 20px;
-        font-size: large;
+        font-size: x-large;
         display: inline; /* Display li elements inline */
-        
+        color: #2e8b57;
     }
     
     .navbar li:hover {
         padding: 20px;
         border-bottom: 7px solid #2e8b57;
         transition: border-bottom .5s ease-in;
-        font-size: large;
+        font-size: 22px;
     }
     
     .navbar {

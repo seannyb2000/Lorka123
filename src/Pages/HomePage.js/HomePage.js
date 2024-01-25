@@ -9,9 +9,9 @@ import experience from "../assets/experience.png";
 import small from "../assets/small.png";
 import unique from "../assets/unique.png";
 import industry from "../assets/industry.png";
-import photo1 from "../assets/Photo1.png";
-import photo2 from "../assets/Photo2.png";
-import photo3 from "../assets/Photo3.png";
+import facebook from "../assets/facebook.png";
+import instagram from "../assets/instagram.png";
+import x from "../assets/x.png";
 const Home = () => {
   return (
     <div>
@@ -128,11 +128,24 @@ const Home = () => {
             ups and Already established Brands and most importantly, the high
             caliber of our tutors who are experts in Their fields.
           </p>
-          <a id="callbtn">Call Us</a>
+          <a href="tel:089 600 9228" id="callbtn">Call Us</a>
         </div>
       </div>
       <div className="ourteam">
-        <p id="ourteamheader">
+        <svg
+          id="squiggle"
+          viewBox="0 0 100 100"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="none"
+            stroke="#2e8b57"
+            stroke-width="1"
+            d="M0 50 Q25 20 50 50 T100 50"
+          />
+        </svg>
+        <p className="ourteamheader">
           <span id="meet">Meet The</span>
           <span id="team"> Team!</span>
         </p>
@@ -208,61 +221,69 @@ const Home = () => {
 
       <h1 id="whatweoffer">Price List</h1>
 
-<div id="Offer">
-  <div id="headering"></div>
-  <div id="offerImgContainter">
-    <div class="category">
-      <h3>Makeup</h3>
-      <ul>
-        <li>Basic Makeup: 45 mins - €40</li>
-        <li>Makeup with Strip Lashes: 1 hour - €45</li>
-        <li>Makeup with Individual Lashes: 1 hour - €45 </li>
-        <li>Bridal Makeup: From €200 </li>
-        <li>Occasional Makeup: 1.5 hours - €60 </li>
-        <li>1-2-1 Lesson: 1 hour - €60</li>
-        <li>Strip/Individual Lash Application: 15 mins - €10</li>
-      </ul>
-    </div>
+      <div id="Offer">
+        <div id="headering"></div>
+        <div id="offerImgContainter">
+          <div class="category">
+            <h3>Makeup</h3>
+            <ul>
+              <li>Basic Makeup: 45 mins - €40</li>
+              <li>Makeup with Strip Lashes: 1 hour - €45</li>
+              <li>Makeup with Individual Lashes: 1 hour - €45 </li>
+              <li>Bridal Makeup: From €200 </li>
+              <li>Occasional Makeup: 1.5 hours - €60 </li>
+              <li>1-2-1 Lesson: 1 hour - €60</li>
+              <li>Strip/Individual Lash Application: 15 mins - €10</li>
+            </ul>
+          </div>
 
-    <div class="category">
-      <h3>Brow</h3>
-      <ul>
-        <li>Tint: 15 mins - €10</li>
-        <li>Wax: 20 mins - €18</li>
-        <li>Hybrid Brow Wax and Tint: 40 mins - €28</li>
-        <li>Lamination: 30 mins - €40</li>
-      </ul>
-    </div>
+          <div class="category">
+            <h3>Brow</h3>
+            <ul>
+              <li>Tint: 15 mins - €10</li>
+              <li>Wax: 20 mins - €18</li>
+              <li>Hybrid Brow Wax and Tint: 40 mins - €28</li>
+              <li>Lamination: 30 mins - €40</li>
+            </ul>
+          </div>
 
-    <div class="category">
-      <h3>Lash</h3>
-      <ul>
-        <li>Lash Lift: 30 mins - €40</li>
-        <li>Lamination and Lash Lift Combo: 45 mins - €70</li>
-        <li>Lash Tint: 20 mins - €15</li>
-      </ul>
-    </div>
+          <div class="category">
+            <h3>Lash</h3>
+            <ul>
+              <li>Lash Lift: 30 mins - €40</li>
+              <li>Lamination and Lash Lift Combo: 45 mins - €70</li>
+              <li>Lash Tint: 20 mins - €15</li>
+            </ul>
+          </div>
 
-    <div class="category">
-      <h3>Waxing</h3>
-      <ul>
-        <li>Lip Wax: 15 mins - €15</li>
-        <li>Chin Wax: 15 mins - €15</li>
-        <li>Sides of the Face: 15 mins - €15</li>
-        <li>Facial Waxing Combo: 35 mins - €35</li>
-      </ul>
-    </div>
+          <div class="category">
+            <h3>Waxing</h3>
+            <ul>
+              <li>Lip Wax: 15 mins - €15</li>
+              <li>Chin Wax: 15 mins - €15</li>
+              <li>Sides of the Face: 15 mins - €15</li>
+              <li>Facial Waxing Combo: 35 mins - €35</li>
+            </ul>
+          </div>
 
-    <div class="category">
-      <h3>Courses</h3>
-      <ul>
-        <li>Hybrid Wax and Tint Course Accredited: 4 hours - €495</li>
-        <li>Brow Lamination Accredited: 3 hours - €300</li>
-        <li>Lash Lift Course Accredited: 3 hours - €300</li>
-      </ul>
-    </div>
-  </div>
-</div>
+          <div class="category">
+            <h3>Courses</h3>
+            <ul>
+              <li>Hybrid Wax and Tint Course Accredited: 4 hours - €495</li>
+              <li>Brow Lamination Accredited: 3 hours - €300</li>
+              <li>Lash Lift Course Accredited: 3 hours - €300</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p className="ourteamheader"><span id="team">Book</span> <span>Now!</span></p>
+        <div className="Bookings">
+        
+        </div>
+
+      </div>
 
       <div id="Contact">
         <div id="CompanyInfo">
@@ -270,17 +291,49 @@ const Home = () => {
             <a href="tel:089 600 9228"> Phone : 089 600 9228</a>
           </h3>
           <h3>
-            <a href="mailto:lorkamakeupandbeautytraining@gmail.com"> Email : lorkamakeupandbeautytraining@gmail.com</a>
+            <a href="mailto:lorkamakeupandbeautytraining@gmail.com">
+              {" "}
+              Email : lorkamakeupandbeautytraining@gmail.com
+            </a>
           </h3>
+
+          <div id="socials">
+            <div>
+              <a href="https://www.facebook.com/Lorkabeautytraining">
+                <img src={facebook} />
+              </a>
+            </div>
+            <div>
+              <a href="https://www.instagram.com/lorkamakeupbeauty/">
+                <img src={instagram} />
+              </a>
+            </div>
+            <div>
+              <a>
+                <img src={x} />
+              </a>
+            </div>
+          </div>
         </div>
 
         <div id="OpeningHours">
           <h2>Opening Hours: </h2>
-          <p>Monday + Sunday - Closed<br/><br/> Tuesday	9 a.m.–4 p.m.
-<br/><br/>Wednesday	9 a.m.–4 p.m.
-<br/><br/>Thursday	9 a.m.–4 p.m.
-<br/><br/>Friday	9 a.m.–7 p.m.
-<br/><br/>  Saturday	9 a.m.–5 p.m. </p>
+          <p>
+            Monday + Sunday - Closed
+            <br />
+            <br /> Tuesday 9 a.m.–4 p.m.
+            <br />
+            <br />
+            Wednesday 9 a.m.–4 p.m.
+            <br />
+            <br />
+            Thursday 9 a.m.–4 p.m.
+            <br />
+            <br />
+            Friday 9 a.m.–7 p.m.
+            <br />
+            <br /> Saturday 9 a.m.–5 p.m.{" "}
+          </p>
         </div>
       </div>
     </div>
