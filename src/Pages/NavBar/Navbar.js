@@ -13,6 +13,7 @@ const NavBar = () => {
   return (
     <header className="header">
       <nav>
+
         <ul className='navbar fade-in-border'>
           <li>
             <Link to="About" smooth={true} duration={800} onClick={() => scrollTo('About')}>
