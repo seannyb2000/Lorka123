@@ -1,15 +1,14 @@
 import React from 'react';
-import { Link, animateScroll as scroll } from 'react-scroll'; // Import Link and scroll from react-scroll
+import { Link, animateScroll } from 'react-scroll'; // Import Link and scroll from react-scroll
 import './NavBar.css';
-
 const NavBar = () => {
   const scrollTo = (id) => {
-    scroll.scrollTo(id, {
-      duration: 800, // You can adjust the duration of the scroll
+    animateScroll.scrollTo(id, {
+      duration: 800,
       smooth: true,
+      offset: +200,
     });
   };
-
   return (
     <header className="header">
       <nav>
@@ -26,13 +25,18 @@ const NavBar = () => {
             </Link>
           </li>
           <li>
-            <Link to="Offer" smooth={true} duration={800} onClick={() => scrollTo('Offer')}>
+            <Link to="whatweoffer" smooth={true} duration={800} onClick={() => scrollTo('whatweoffer')}>
               Price List
             </Link>
           </li>
           <li>
             <Link to="Contact" smooth={true} duration={800} onClick={() => scrollTo('Contact')}>
               Contact Us
+            </Link>
+          </li>
+          <li>
+            <Link to="Brands" smooth={true} duration={800} onClick={() => scrollTo('Brands')}>
+              Book Now!
             </Link>
           </li>
          

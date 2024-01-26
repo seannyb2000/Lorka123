@@ -1,4 +1,24 @@
+body
+{
+  zoom: .8;
+}
+#Brands img
+{
+  width: 100%;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
 @media(min-width: 1000px) {
+
+
+
   body {
     background-color: white;
     font-family: "Times New Roman", Times, serif;
@@ -38,14 +58,15 @@
     height: 100%;
     pointer-events: none;
     z-index: -1;
+    animation: wave 2s infinite alternate;
   }
 
   .content {
-    z-index: 2; /* Ensure the content is above the pseudo-element */
-    color: white; /* Adjust text color to be visible against the dimmed background */
+    z-index: 2; 
+    color: white; 
     text-decoration-skip-ink: none;
     word-wrap: break-word;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Adjust the values a */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); 
     backdrop-filter: brightness(60%);
     padding-top: 10px;
     padding-bottom: 25px;
@@ -99,24 +120,24 @@
   }
 
   .imgContainer {
-    flex: 0 0 auto; /* Ensure the image container doesn't grow */
-    margin-right: 40px; /* Adjust the margin to create space between image and text */
+    flex: 0 0 auto; 
+    margin-right: 40px; 
     margin-top: 30px;
     width: 10%;
   }
 
   .textContainer {
-    flex: 1; /* Allow the text container to grow and fill the available space */
+    flex: 1;
     color: #2e8b57;
   }
 
   .head {
-    margin-top: 0; /* Reset margin for the heading */
+    margin-top: 0; 
     font-size: 24px;
   }
 
   .desc {
-    margin-top: 0; /* Reset margin for the paragraph */
+    margin-top: 0; 
     text-wrap: nowrap;
   }
 
@@ -144,8 +165,8 @@
     margin-bottom: 4%;
   }
   #abImgContainter {
-    flex: 0; /* Ensure the image container doesn't grow */
-    padding-right: 300px; /* Adjust the margin to create space between image and text */
+    flex: 0; 
+    padding-right: 300px; 
     background-image: url("../assets/logo.png");
     zoom: 3;
     background-repeat: no-repeat;
@@ -182,14 +203,14 @@
     box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.2);
     padding-bottom: 5%;
     border-radius: 5%;
-    display: flex; /* Use flexbox */
-    flex-direction: column; /* Stack child elements vertically */
-    height: 100%; /* Ensure card takes full height */
+    display: flex; 
+    flex-direction: column; 
+    height: 100%; 
   }
 
   .container {
     padding: 0 16px;
-    height: 100%; /* Ensure container takes full height */
+    height: 100%; 
     background-color: white;
   }
 
@@ -273,9 +294,6 @@
     box-shadow: 1px 1px 1px 1px gray;
   }
 
-  .category:hover {
-    background-color: lightgray;
-  }
 
   .category h3 {
     font-size: 24px;
@@ -331,7 +349,7 @@
   #CompanyInfo {
     width: 50%;
     color: white;
-    margin-left: 10%;
+    margin-right: 15%;
   }
   #CompanyInfo a {
     text-decoration: none;
@@ -344,10 +362,12 @@
 
   #CompanyInfo h3 {
     margin-top: 10%;
+    font-size: large;
   }
 
   #OpeningHours {
     font-weight: 600;
+    font-size: large;
   }
   #socials {
     display: flex;
@@ -360,7 +380,7 @@
 
 
 
-@media (max-width: 812px) {
+@media (max-width: 1000px) {
   h1 {
     font-size: 50px;
   }
@@ -384,15 +404,15 @@
 
   #whytrain {
     margin-top: 5%;
-    padding-bottom: 50px; /* Adjusted padding for smaller screens */
+    padding-bottom: 50px; 
   }
 
   .content {
-    z-index: 2; /* Ensure the content is above the pseudo-element */
-    color: white; /* Adjust text color to be visible against the dimmed background */
+    z-index: 2; 
+    color: white; 
     text-decoration-skip-ink: none;
     word-wrap: break-word;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Adjust the values a */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); 
     backdrop-filter: brightness(60%);
     padding-top: 10px;
     padding-bottom: 25px;
@@ -407,6 +427,7 @@
     border: 1px 1px 1px 1px solid black;
     text-decoration: none;
     color: white;
+    display: none;
     padding: 0.5%;
   }
 
@@ -420,36 +441,41 @@
     text-align: center;
     color: #2e8b57;
     word-wrap: break-word;
-    padding: 0 20px; /* Added padding for smaller screens */
+    padding: 0 20px; 
   }
   
   .gridContainer {
     display: flex;
-    flex-direction: column; /* Adjusted flex direction for smaller screens */
-    align-items: center; /* Center items for smaller screens */
+    flex-direction: column; 
+    align-items: center; 
   }
   
   .grid-item {
     display: flex;
-    flex-direction: column; /* Adjusted flex direction for smaller screens */
-    align-items: center; /* Center items for smaller screens */
+    flex-direction: column; 
+    align-items: center; 
     padding: 20px;
     text-wrap: no-wrap;
   }
   
   .imgContainer img {
-    width: 50%; /* Adjusted width for smaller screens */
-    margin-left: 35%;
+    width: 50%; 
+    margin-left: 22%;
   }
   
   .imgContainer {
-    margin-bottom: 20px; /* Adjusted margin for smaller screens */
+    margin-bottom: 20px; 
     width: 100%;
   }
   
   .textContainer {
     text-align: center;
     color: #2e8b57;
+  }
+
+  svg
+  {
+    display: none;
   }
   
   .head {
@@ -462,43 +488,43 @@
   }
 
   #About {
-    flex-direction: column; /* Change to column layout for smaller screens */
+    flex-direction: column; 
   }
   
   #abtxtcontainer {
     background-color: white;
     color: #2e8b57;
-    padding: 5% 10px; /* Adjusted padding for smaller screens */
+    padding: 5% 10px; 
   }
   
   #abtxtcontainer > h3 {
-    font-size: 28px; /* Adjusted font size for smaller screens */
+    font-size: 28px; 
     font-weight: 500;
-    margin-left: 0; /* Remove left margin for smaller screens */
+    margin-left: 0; 
   }
   
   #abtxtcontainer > p {
-    margin-left: 0; /* Remove left margin for smaller screens */
+    margin-left: 0; 
     margin-bottom: 4%;
   }
   
   #abImgContainer {
-    flex: 0; /* Ensure the image container doesn't grow */
+    flex: 0; 
     background-image: url("../assets/logo.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 100%; /* Make the image container take full width */
-    height: 200px; /* Adjusted height for smaller screens */
-    margin-bottom: 20px; /* Add margin at the bottom for spacing */
+    width: 100%;
+    height: 200px; 
+    margin-bottom: 20px; 
   }
   
   #callbtn {
-    padding: 8px 12px; /* Adjusted padding for smaller screens */
-    border-radius: 5px; /* Adjusted border-radius for smaller screens */
+    padding: 8px 12px; 
+    border-radius: 5px; 
     border: 2px solid white;
     background-color: #2e8b57;
-    margin-left: 0%; /* Remove left margin for smaller screens */
+    margin-left: 0%; 
     color: white;
   }
 
@@ -529,8 +555,8 @@
     border-radius: 5%;
 }
     .column {
-        width: 90%; /* Adjust width for 812px screens */
-        margin-right: 2%; /* Adjust margin for 812px screens */
+        width: 90%; 
+        margin-right: 2%; 
     }
 
     .ourteam {
@@ -546,6 +572,7 @@
       height: 100%;
       pointer-events: none;
       z-index: -1;
+      animation: wave 2s infinite alternate;
     }
 
     .ourteamheader {
@@ -605,9 +632,7 @@
       box-shadow: 1px 1px 1px 1px gray;
     }
   
-    .category:hover {
-      background-color: lightgray;
-    }
+   
   
     .category h3 {
       font-size: 24px;
@@ -666,26 +691,26 @@
     }
 
     #CompanyInfo {
-      width: 50%; /* Restore width for screens larger than 812px */
+      width: 50%; 
       margin-left: 10%;
   }
 
   #OpeningHours {
-      width: 50%; /* Adjust width for screens larger than 812px */
-      margin-top: 0; /* Remove top margin for better alignment */
+      width: 50%; 
+      margin-top: 0; 
   }
 
   #Contact {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line on small screens */
+    flex-wrap: wrap; 
     padding: 5%;
     color: white;
     background-color: #26814e;
 }
 
 #CompanyInfo {
-    width: 100%; /* Full width for small screens */
-    margin: 0; /* Remove margin for small screens */
+    width: 100%; 
+    margin: 0; 
 }
 
 #CompanyInfo a {
@@ -695,23 +720,24 @@
 
 #CompanyInfo div,
 #CompanyInfo h3 {
-    margin-top: 5%; /* Adjust margin for better spacing on small screens */
+    margin-top: 5%; 
     font-size: medium;
 }
 
 #OpeningHours {
     font-weight: 600;
-    width: 100%; /* Full width for small screens */
-    margin-top: 5%; /* Adjust margin for better spacing on small screens */
+    width: 100%; 
+    margin-top: 5%; 
+    
 }
 
 #socials {
     display: flex;
-    justify-content: space-around; /* Evenly distribute social icons */
+    justify-content: space-around; 
 }
 
 #socials img {
-    width: 20%; /* Adjust the size of social icons for better visibility */
+    width: 20%; 
 }
   
 }

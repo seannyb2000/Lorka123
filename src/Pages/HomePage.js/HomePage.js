@@ -12,7 +12,23 @@ import industry from "../assets/industry.png";
 import facebook from "../assets/facebook.png";
 import instagram from "../assets/instagram.png";
 import x from "../assets/x.png";
+import Brands from '../assets/Brands.png'
 const Home = () => {
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = () => {
+    setScrollPosition(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div>
       <NavBar />
@@ -131,20 +147,22 @@ const Home = () => {
           <a href="tel:089 600 9228" id="callbtn">Call Us</a>
         </div>
       </div>
-      <div className="ourteam">
-        <svg
-          id="squiggle"
-          viewBox="0 0 100 100"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-        >
-          <path
-            fill="none"
-            stroke="#2e8b57"
-            stroke-width="1"
-            d="M0 50 Q25 20 50 50 T100 50"
-          />
-        </svg>
+
+     
+      <div id="ourteam" className="ourteam">
+      <svg
+  id="squiggle"
+  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg"
+  preserveAspectRatio="none"
+  style={{
+    animation: 'wave 2s infinite alternate',
+    transform: `translateY(${Math.abs(Math.sin(scrollPosition / 50)) * 10}px)`,
+  }}
+>
+  <path fill="none" stroke="#2e8b57" strokeWidth="1" d="M0 50 Q25 20 50 50 T100 50"/>
+</svg>
+
         <p className="ourteamheader">
           <span id="meet">Meet The</span>
           <span id="team"> Team!</span>
@@ -277,9 +295,15 @@ const Home = () => {
         </div>
       </div>
 
+    
+      <div id="Brands">
+      <p className="ourteamheader"><span id="team">Our</span> <span >Brands!</span></p>
+        <img src={Brands}></img>
+      </div>
+
       <div>
-        <p className="ourteamheader"><span id="team">Book</span> <span>Now!</span></p>
-        <div className="Bookings">
+        <a href="https://www.fresha.com/a/lorka-makeup-and-beauty-training-academy-rathcoole-eaton-house-main-street-kqcrwbq4"><p className="ourteamheader"><span >Book</span> <span id="team">Now!</span></p></a>
+        <div id='Book' className="Bookings">
         
         </div>
 
@@ -294,6 +318,12 @@ const Home = () => {
             <a href="mailto:lorkamakeupandbeautytraining@gmail.com">
               {" "}
               Email : lorkamakeupandbeautytraining@gmail.com
+            </a>
+          </h3>
+          <h3>
+            <a href="https://www.google.com/maps/search/Unit+3b,+Eaton+House,+Main+St,+Rathcoole,+Co.+Dublin,+D24+Y967/@53.2809694,-6.4733454,17z/data=!3m1!4b1?entry=ttu">
+              {" "}
+              Location : Unit 3b, Eaton House, Main St, Rathcoole, Co. Dublin, D24 Y967
             </a>
           </h3>
 

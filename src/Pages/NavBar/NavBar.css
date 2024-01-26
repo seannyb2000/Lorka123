@@ -2,7 +2,6 @@
     padding-bottom: 0.5%;
     background-color: white;
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
-    position: fixed;
     width: 100%; /* Ensure the header spans the full width */
     top: 0;
     z-index: 1000; /* Set a high z-index to keep it above other elements */
@@ -14,8 +13,8 @@
 
 #PageHeader {
     color: black;
-    -webkit-text-stroke: 2px darkolivegreen;
-    stroke: 1px darkolivegreen;
+    -webkit-text-stroke: 2px #2e8b57;
+    stroke: 1px #2e8b57;
     font-size: 40px;
     justify-content: center;
     text-align: center;
@@ -43,11 +42,10 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    justify-content: space-between; /* Distribute items evenly */
 }
 
 #logo {
-    margin-left: 10px; /* Adjust the margin for spacing */
+    margin-left: auto; /* Adjust the margin for spacing */
 }
 
 @media (max-width: 812px) {
