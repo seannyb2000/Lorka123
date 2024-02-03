@@ -7,6 +7,22 @@ body
   width: 100%;
 }
 
+.fade-in-image {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.fade-in-image.fade-in {
+  opacity: 1;
+}
+
+.booknow
+{
+
+  text-decoration: none; 
+  color: inherit;
+}
+
 @keyframes wave {
   0% {
     transform: translateY(0);
@@ -16,6 +32,8 @@ body
   }
 }
 @media(min-width: 1000px) {
+
+
 
 
 
@@ -33,10 +51,11 @@ body
     text-align: center;
     margin-top: 0;
     width: auto;
-    background-image: url("https://lirp.cdn-website.com/87a49eaf/dms3rep/multi/opt/IMG_20220111_162647-58538e88-1920w.jpg") !important;
+    background-image: url("../assets/Background.jpg") !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
-    background-attachment: fixed !important;
+    background-attachment: scroll !important;
+    background-position: top;
     max-width: none !important;
 
     padding: 254px 40px !important;
@@ -82,6 +101,7 @@ body
     text-decoration: none;
     color: white;
     padding: 0.5%;
+    visibility: hidden;
   }
 
   a:hover {
@@ -200,7 +220,6 @@ body
   }
 
   .card {
-    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.2);
     padding-bottom: 5%;
     border-radius: 5%;
     display: flex; 
@@ -209,14 +228,15 @@ body
   }
 
   .container {
-    padding: 0 16px;
+    box-shadow: 1px  2px 2px rgba(0, 0, 0, 0.2);
+    padding: 10%;
     height: 100%; 
     background-color: white;
   }
 
   .card img {
     width: 100%;
-    border-radius: 5%;
+    border-radius: 50%;
   }
 
   .container::after,
@@ -263,10 +283,7 @@ body
     color: #2e8b57;
     font-weight: 600;
   }
-  .card:hover {
-    opacity: 0.8;
-  }
-
+  
   #Offer {
     display: flex;
     flex-wrap: wrap;
@@ -390,7 +407,7 @@ body
     text-align: center;
     margin-top: 0;
     width: auto;
-    background-image: url("https://lirp.cdn-website.com/87a49eaf/dms3rep/multi/opt/IMG_20220111_162647-58538e88-1920w.jpg") !important;
+    background-image: url("../assets/Background.jpg") !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-attachment: fixed !important;
@@ -466,6 +483,11 @@ body
   .imgContainer {
     margin-bottom: 20px; 
     width: 100%;
+  }
+
+  #mov
+  {
+    margin-left: 30%
   }
   
   .textContainer {
@@ -699,6 +721,8 @@ body
       width: 50%; 
       margin-top: 0; 
   }
+
+ 
 
   #Contact {
     display: flex;

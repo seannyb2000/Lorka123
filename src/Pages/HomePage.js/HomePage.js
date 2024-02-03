@@ -15,6 +15,7 @@ import x from "../assets/x.png";
 import Brands from '../assets/Brands.png'
 const Home = () => {
 
+
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = () => {
@@ -22,10 +23,38 @@ const Home = () => {
   };
 
   useEffect(() => {
+    const images = document.querySelectorAll('.fade-in-image');
+
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5, // Adjust this value based on when you want the fade-in effect to start
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    images.forEach((image) => {
+      observer.observe(image);
+    });
+
+
+     
     window.addEventListener('scroll', handleScroll);
 
+ 
+      
+
     return () => {
+      observer.disconnect();
       window.removeEventListener('scroll', handleScroll);
+
     };
   }, []);
 
@@ -64,7 +93,7 @@ const Home = () => {
           <div>
             <div className="grid-item">
               <div className="imgContainer">
-                <img src={experience}></img>
+                <img id="mov" src={experience}></img>
               </div>
 
               <div className="textContainer">
@@ -170,52 +199,48 @@ const Home = () => {
 
         <div className="row" id="fadeRow">
           <div className="column">
-            <div className="card">
-              <img id="lor" src={lorraine} alt="Lorraine" />
+            <div className="card fade-in-image">
+              <img id="lor" src={lorraine} alt="Lorraine"   />
               <div className="container">
                 <h2>Lorraine Bourke Byrne</h2>
                 <p className="title">Co-Founder</p>
                 <p>
-                  Greetings, I'm Lorraine, one of the Co-Founders of Lorka
-                  Makeup and Beauty Training. With a rich 15-year tenure in the
-                  makeup industry, my journey has been adorned with
-                  collaborations with esteemed brands like Antipodes, Bare
-                  Minerals, and numerous others.
+                Lorrine, a seasoned makeup artist with over a decade of experience, boasts an impressive portfolio including collaborations with renowned publications such as The Sun, The Sunday World, and The Herald. Her client roster features notable personalities like Celine Byrne, Nóirín O'Sullivan, and Miss Ireland, while also extending to partnerships with esteemed brands like Lidl, An Garda Síochána, Olive Media, and Gló Minerals.<br/><br/> Lorraine has showcased her talent on TV stations such as RTE, Network 2, and Kildare TV, and has affiliations with makeup brands like Bare Minerals, Essence Glo Minerals, Glo Therapeutics, and Antipodes. With grace and elegance, she imparts her extensive industry knowledge to students in various esteemed institutions including MKF, Portabello Institute, La Makeup Academy, and Galligens, contributing to the growth of the makeup industry.
                   <br />
                   <br />{" "}
                 </p>
-                <a href="mailto:lorkamakeupandbeautytraining@gmail.com">
-                  lorkamakeupandbeautytraining@gmail.com
+                <a href="mailto:lorkamakeupandbeauty@gmail.com">
+                lorkamakeupandbeauty@gmail.com
                 </a>
               </div>
             </div>
           </div>
 
           <div className="column">
-            <div className="card">
+            <div className="card fade-in-image" >
               <img id="kar" src={kara} alt="Kara" />
               <div className="container">
                 <h2>Kara Byrne</h2>
                 <p className="title">Co-Founder</p>
                 <p>
-                  Hi Kara here. I am one of the Co-Founders here at Lorka Makeup
-                  and Beauty Training. I have been working in the beauty
-                  industry for many years with experience across all sectors.I
-                  am a skilled in all things Makeup , Brows , Waxing and more.*
-                  more Text* <br />
+                Kara, a seasoned makeup artist with 17 years of experience, holds qualifications in Makeup Artistry, Photographic and Media Makeup, Waxing, and Facial Therapy since 2005. For many years, she excelled as a freelance bridal makeup artist, crafting personalized packages nationwide.
+
+<br/><br/>Her talent extends to award-winning collaborations for the Irish Hair Awards with House of Color and L'Oreal Stylists. Kara has also managed premium accounts for Lancôme, Este Lauder, and No7, partnering with Debenhams and Boots to elevate sales while sharing her extensive knowledge with thousands of clients annually.
+
+<br/><br/>Beyond her industry contributions, Kara has lectured at prestigious institutions such as Portabello Institute, LA Makeup Academy, Galligam Beauty College, and CIBHT. Eventually, she co-founded Lorka Makeup and Beauty Academy with her business partner and best friend, Loraine Bourke Byrne.
                   <br />
                   <br />
                 </p>
-                <a href="mailto:lorkamakeupandbeautytraining@gmail.com">
-                  lorkamakeupandbeautytraining@gmail.com
+                <a href="mailto:lorkamakeupandbeauty@gmail.com">
+                lorkamakeupandbeauty@gmail.com
                 </a>
               </div>
             </div>
           </div>
 
-          <div className="column">
-            <div className="card">
-              <img id="justina" src={justina} alt="John" />
+         <div className="column">
+            <div className="card fade-in-image">
+              <img id="justina" src={justina} alt="justina"  className="fade-in-image" />
               <div className="container">
                 <h2>Justina Zil</h2>
                 <p className="title">Owner Of Justina Lashes</p>
@@ -225,12 +250,15 @@ const Home = () => {
                   Beauty Training.I work on clients lashes using my own lash
                   products.If you would like to book in with me please visit me
                   at{" "}
-                  <a href="https://www.instagram.com/justinalashes_/">
+                  <a href="https://www.instagram.com/justinalashes_/" className="booknow">
                     justinalashes_
                   </a>{" "}
                   on instagram or text the number below
                 </p>
                 <a href="tel:087 964 8177">087 964 8177</a>
+                <br/>
+                <br/>
+                <a href="https://www.fresha.com/a/justina-lashes-dublin-unit-3b-eaton-house-main-st-v2w1kfn3" className="booknow">Book Now!</a>
               </div>
             </div>
           </div>
@@ -312,12 +340,19 @@ const Home = () => {
       <div id="Contact">
         <div id="CompanyInfo">
           <h3>
-            <a href="tel:089 600 9228"> Phone : 089 600 9228</a>
+            <a href="tel:089 600 9228"> Phone : 089 600 9228 </a>
+        
+            <a href="tel:086 229 0859"> / 086 229 0859 </a>
           </h3>
+        
+           
+          
+
+          
           <h3>
-            <a href="mailto:lorkamakeupandbeautytraining@gmail.com">
+            <a href="mailto:lorkamakeupandbeauty@gmail.com">
               {" "}
-              Email : lorkamakeupandbeautytraining@gmail.com
+              Email : lorkamakeupandbeauty@gmail.com
             </a>
           </h3>
           <h3>
